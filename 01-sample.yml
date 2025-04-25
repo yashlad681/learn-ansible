@@ -1,6 +1,9 @@
-- name: Sample Playbook
-  hosts: all
+- name: Play level variables
+  hosts: localhost
+  connection: local
+  vars:
+    url: play.example.com
   tasks:
-    - name: Print Hello World
+    - name: Print url
       ansible.builtin.debug:
-        msg: Hello World
+        msg: url - {{ url }}
