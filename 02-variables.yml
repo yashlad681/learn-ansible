@@ -7,3 +7,13 @@
     - name: Print url
       ansible.builtin.debug:
         msg: url - {{ url }}
+
+- name: Task level variable
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print url
+      ansible.builtin.debug:
+        msg: url - {{ url }}
+      vars:
+        url: task.examle.com
