@@ -16,4 +16,4 @@
       ansible.builtin.debug:
         msg: url - {{ url }}
       vars:
-        url: task.examle.com
+        url: task.example.com
