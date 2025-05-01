@@ -1,0 +1,10 @@
+- name: Ansible vault
+  connection: local
+  hosts: localhost
+  vars:
+    my_password:
+
+  tasks:
+    - name: Print password
+      ansible.builtin.debug:
+        msg: "{{ my_password }}"
